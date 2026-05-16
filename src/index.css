@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kemaro — editorial luxury design system. All HSL. */
+
+@layer base {
+  /* Light luxury stage — default */
+  :root {
+    --background: 38 44% 97%;
+    --foreground: 28 22% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 28 22% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 28 22% 12%;
+
+    --primary: 36 70% 44%;
+    --primary-foreground: 36 40% 98%;
+    --primary-glow: 42 85% 62%;
+
+    --secondary: 36 28% 93%;
+    --secondary-foreground: 28 22% 12%;
+
+    --muted: 36 22% 90%;
+    --muted-foreground: 28 10% 36%;
+
+    --accent: 36 70% 44%;
+    --accent-foreground: 36 40% 98%;
+    --accent-2: 175 32% 34%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 36 40% 98%;
+
+    --border: 30 15% 84%;
+    --input: 30 15% 84%;
+    --ring: 36 70% 44%;
+
+    --radius: 0.875rem;
+
+    /* On-image tokens — always-light copy that sits over photography in BOTH themes */
+    --on-image: 36 40% 98%;
+    --on-image-soft: 36 40% 98% / 0.78;
+    --on-image-faint: 36 40% 98% / 0.55;
+
+    --hairline: 36 70% 44% / 0.22;
+    --surface-elevated: 0 0% 100%;
+    --glass: 0 0% 100% / 0.55;
+    --glass-border: 36 70% 44% / 0.18;
+
+    --gradient-gold: linear-gradient(135deg, hsl(36 70% 44%), hsl(42 85% 62%));
+    --gradient-overlay: linear-gradient(180deg, hsl(28 22% 8% / 0.18) 0%, hsl(28 22% 8% / 0.5) 60%, hsl(28 22% 8% / 0.92) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(28 22% 8% / 0.42) 0%, hsl(28 22% 8% / 0.32) 50%, hsl(28 22% 8% / 0.85) 100%);
+    --gradient-soft: radial-gradient(1200px 600px at 70% 0%, hsl(42 85% 62% / 0.12), transparent 60%);
+    --shadow-gold: 0 24px 70px -22px hsl(36 70% 44% / 0.45);
+    --shadow-elegant: 0 30px 80px -30px hsl(28 22% 8% / 0.22);
+    --shadow-float: 0 40px 100px -40px hsl(28 22% 8% / 0.28);
+    --shadow-soft: 0 12px 40px -16px hsl(28 22% 8% / 0.14);
+
+    --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-smooth: all 0.7s var(--ease-cinematic);
+
+    --sidebar-background: 38 44% 97%;
+    --sidebar-foreground: 28 22% 12%;
+    --sidebar-primary: 36 70% 44%;
+    --sidebar-primary-foreground: 36 40% 98%;
+    --sidebar-accent: 36 28% 93%;
+    --sidebar-accent-foreground: 28 22% 12%;
+    --sidebar-border: 30 15% 84%;
+    --sidebar-ring: 36 70% 44%;
+  }
+
+  /* Cinematic dark stage */
+  .dark {
+    --background: 28 14% 6%;
+    --foreground: 36 30% 94%;
+
+    --card: 28 12% 9%;
+    --card-foreground: 36 30% 94%;
+
+    --popover: 28 12% 9%;
+    --popover-foreground: 36 30% 94%;
+
+    --primary: 36 60% 60%;
+    --primary-foreground: 28 14% 8%;
+    --primary-glow: 42 80% 70%;
+
+    --secondary: 28 10% 12%;
+    --secondary-foreground: 36 30% 94%;
+
+    --muted: 28 10% 14%;
+    --muted-foreground: 36 14% 68%;
+
+    --accent: 36 60% 60%;
+    --accent-foreground: 28 14% 8%;
+    --accent-2: 175 28% 52%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 36 30% 94%;
+
+    --border: 36 10% 18%;
+    --input: 36 10% 18%;
+    --ring: 36 60% 60%;
+
+    --hairline: 36 60% 60% / 0.28;
+    --surface-elevated: 28 12% 11%;
+    --glass: 28 12% 9% / 0.6;
+    --glass-border: 36 60% 60% / 0.22;
+
+    --gradient-overlay: linear-gradient(180deg, hsl(28 14% 4% / 0.2) 0%, hsl(28 14% 4% / 0.55) 60%, hsl(28 14% 4% / 0.95) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(28 14% 4% / 0.45) 0%, hsl(28 14% 4% / 0.35) 50%, hsl(28 14% 4% / 0.88) 100%);
+    --gradient-soft: radial-gradient(1200px 600px at 70% 0%, hsl(42 80% 70% / 0.08), transparent 60%);
+    --shadow-elegant: 0 30px 80px -30px hsl(0 0% 0% / 0.65);
+    --shadow-float: 0 40px 100px -40px hsl(0 0% 0% / 0.7);
+    --shadow-soft: 0 12px 40px -16px hsl(0 0% 0% / 0.4);
+
+    --sidebar-background: 28 14% 6%;
+    --sidebar-foreground: 36 30% 94%;
+    --sidebar-primary: 36 60% 60%;
+    --sidebar-primary-foreground: 28 14% 8%;
+    --sidebar-accent: 28 10% 12%;
+    --sidebar-accent-foreground: 36 30% 94%;
+    --sidebar-border: 36 10% 18%;
+    --sidebar-ring: 36 60% 60%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display tracking-tight;
+    font-weight: 500;
+  }
+
+  ::selection { background: hsl(var(--primary) / 0.35); color: hsl(var(--foreground)); }
+}
+
+@layer components {
+  .container-luxury { @apply mx-auto w-full max-w-7xl px-6 md:px-10; }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-primary/90;
+    letter-spacing: 0.3em;
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-px w-8 bg-primary/60;
+  }
+
+  .text-gold { color: hsl(var(--primary)); }
+
+  /* Always-light copy for image overlays (works in both themes) */
+  .text-on-image       { color: hsl(var(--on-image)); }
+  .text-on-image-soft  { color: hsl(var(--on-image-soft)); }
+  .text-on-image-faint { color: hsl(var(--on-image-faint)); }
+  .border-on-image     { border-color: hsl(36 40% 98% / 0.28); }
+  .bg-on-image-glass   { background: hsl(28 14% 6% / 0.35); backdrop-filter: blur(10px); }
+
+  .overlay-cinematic { background: var(--gradient-overlay); }
+  .overlay-hero { background: var(--gradient-hero); }
+
+  /* Glassy luxury card chrome */
+  .glass-card {
+    background: hsl(var(--glass));
+    border: 1px solid hsl(var(--glass-border));
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: var(--shadow-soft);
+    border-radius: var(--radius);
+  }
+  .hairline-gold { border-color: hsl(var(--hairline)); }
+
+  .luxury-image { @apply overflow-hidden relative; }
+  .luxury-image img {
+    @apply h-full w-full object-cover;
+    transition: transform 1.6s var(--ease-cinematic), filter 1.6s var(--ease-cinematic);
+  }
+  .luxury-image:hover img,
+  .group:hover .luxury-image img {
+    transform: scale(1.07);
+    filter: brightness(1.05) saturate(1.05);
+  }
+
+  /* Gold corner accents on image cards */
+  .corner-accents::before,
+  .corner-accents::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 1px solid hsl(var(--primary) / 0.7);
+    transition: all 0.7s var(--ease-cinematic);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .corner-accents::before { top: 14px; left: 14px; border-right: 0; border-bottom: 0; }
+  .corner-accents::after  { bottom: 14px; right: 14px; border-left: 0; border-top: 0; }
+  .group:hover .corner-accents::before { top: 10px; left: 10px; width: 28px; height: 28px; }
+  .group:hover .corner-accents::after  { bottom: 10px; right: 10px; width: 28px; height: 28px; }
+
+  /* Animated gold underline (nav links / inline links) */
+  .gold-underline {
+    position: relative;
+  }
+  .gold-underline::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -4px;
+    height: 1px; width: 100%;
+    background: hsl(var(--primary));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.7s var(--ease-cinematic);
+  }
+  .gold-underline:hover::after { transform: scaleX(1); transform-origin: left; }
+
+  /* Display fluid sizes */
+  .display-xl { font-size: clamp(3rem, 7vw + 1rem, 7rem); line-height: 1.02; letter-spacing: -0.02em; }
+  .display-lg { font-size: clamp(2.25rem, 4.2vw + 0.5rem, 4.25rem); line-height: 1.05; letter-spacing: -0.015em; }
+  .display-md { font-size: clamp(1.75rem, 2.8vw + 0.5rem, 3rem); line-height: 1.1; letter-spacing: -0.01em; }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    animation: reveal-up 1.1s var(--ease-cinematic) forwards;
+  }
+  .reveal-delay-1 { animation-delay: 0.15s; }
+  .reveal-delay-2 { animation-delay: 0.3s; }
+  .reveal-delay-3 { animation-delay: 0.45s; }
+  .reveal-delay-4 { animation-delay: 0.6s; }
+
+  @keyframes reveal-up {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Scroll-triggered reveal (used by <Reveal />) */
+  .reveal-on-view {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 1.2s var(--ease-cinematic), transform 1.2s var(--ease-cinematic);
+    will-change: opacity, transform;
+  }
+  .reveal-on-view.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes slow-zoom {
+    from { transform: scale(1.02); }
+    to   { transform: scale(1.12); }
+  }
+  .animate-slow-zoom { animation: slow-zoom 22s var(--ease-cinematic) forwards; }
+
+  @keyframes shimmer-line {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+  .animate-shimmer-line { animation: shimmer-line 3.2s ease-in-out infinite; }
+
+  @keyframes gold-shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .text-shimmer-gold {
+    background: linear-gradient(90deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--primary-glow)) 50%,
+      hsl(var(--primary)) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gold-shimmer 6s linear infinite;
+  }
+
+  @keyframes float-soft {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+  .animate-float-soft { animation: float-soft 4.5s ease-in-out infinite; }
+
+  /* Custom luxury cursor (hidden on coarse pointers via component) */
+  .lux-cursor-dot,
+  .lux-cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 9999px;
+    mix-blend-mode: difference;
+  }
+  .lux-cursor-dot {
+    width: 6px; height: 6px;
+    background: hsl(var(--primary-glow));
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .lux-cursor-ring {
+    width: 36px; height: 36px;
+    border: 1px solid hsl(var(--primary-glow) / 0.7);
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    transition: width 0.4s var(--ease-cinematic), height 0.4s var(--ease-cinematic),
+                transform 0.4s var(--ease-cinematic), border-color 0.4s var(--ease-cinematic);
+  }
+  .lux-cursor-ring.is-hover {
+    width: 56px; height: 56px;
+    border-color: hsl(var(--primary));
+  }
+
+  @media (pointer: coarse) {
+    .lux-cursor-dot, .lux-cursor-ring { display: none; }
+  }
+}
